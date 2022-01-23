@@ -22,12 +22,12 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Car·cter no permitido");
+		fail("CarÔøΩcter no permitido");
 	}
 	
 
 	/**
-	 * TC02 - Nombre (Numero car·cteres < 4)
+	 * TC02 - Nombre (Numero carÔøΩcteres < 4)
 	 */
 	@Test
 	void testSetNombreJugador2() {
@@ -36,11 +36,11 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Car·cteres introducidos insuficientes");
+		fail("CarÔøΩcteres introducidos insuficientes");
 	}
 
 	/**
-	 * TC03 - Nombre (Numero car·cteres minimo)
+	 * TC03 - Nombre (Numero carÔøΩcteres minimo)
 	 */
 	@Test
 	void testSetNombreJugador3() {
@@ -49,11 +49,11 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(nombre, jugador.getNombreJugador());
 		
-		fail("Car·cteres introducidos insuficientes");
+		fail("CarÔøΩcteres introducidos insuficientes");
 	}
 	
 	/**
-	 * TC04 - Nombre (Numero car·cteres maximo)
+	 * TC04 - Nombre (Numero carÔøΩcteres maximo)
 	 */
 	@Test
 	void testSetNombreJugador4() {
@@ -62,11 +62,11 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(nombre, jugador.getNombreJugador());
 		
-		fail("Car·cteres introducidos insuficientes");
+		fail("CarÔøΩcteres introducidos insuficientes");
 	}
 	
 	/**
-	 * TC05 - Nombre (Numero car·cteres >20)
+	 * TC05 - Nombre (Numero carÔøΩcteres >20)
 	 */
 	@Test
 	void testSetNombreJugador5() {
@@ -75,7 +75,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Excedido n˙mero car·cteres permitido");
+		fail("Excedido nÔøΩmero carÔøΩcteres permitido");
 	}
 	
 	/**
@@ -88,7 +88,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Car·cteres n˙mericos no permitidos");
+		fail("CarÔøΩcteres nÔøΩmericos no permitidos");
 	}
 	/**
 	 * TC05 - TC18 - Nombre (Null)
@@ -113,7 +113,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		assertEquals(0, jugador.getEdad());
 		
-		fail("Car·cter no v·lido");
+		fail("CarÔøΩcter no vÔøΩlido");
 	}
 	
 	/**
@@ -126,7 +126,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		assertEquals(0, jugador.getEdad());
 		
-		fail("N˙meros negativos no permitidos");
+		fail("NÔøΩmeros negativos no permitidos");
 	}
 	/**
 	 * TC09 - Edad (Menor edad)
@@ -139,5 +139,107 @@ class JugadorTest {
 		assertEquals(0, jugador.getEdad());
 		
 		fail("Menor de edad no permitido");
+	}
+
+	/**
+	 * TC10 - Edad (Mayor edad). Mediante esta prueba el test debe ser v√°lido, al introducir un n√∫mero mayor o igual a 18
+	 */
+	@Test
+	void testSetEdad11() {
+		Jugador jug= new Jugador();
+		int edad= 20;
+		jug.setEdad(edad);
+		assertEquals(edad, jug.getEdad());
+		
+		
+		fail("Todavia no se ha modificado el Getter.");
+	}
+		
+		/**
+		 * TC20 - Edad (Null). Mediante esta prueba el test NO debe ser v√°lido, al introducir un car√°cter vacio en un campo num√©rico.
+		 */
+		@Test
+		void testSetEdad12() {
+			Jugador jug= new Jugador();
+			int edad= 0;
+			jug.setEdad(0);
+			assertEquals(" ", jug.getEdad());
+			
+			
+			fail("Car√°cter introducido no v√°lido, el caracter introducido debe ser num√©rico, y mayor a 18");
+	}
+
+	/**
+	 * TC13 - Idioma (Espa√±ol). Mediante esta prueba, introduciremos un idioma v√°lido. El test deber√° ser v√°lido
+	 */
+	@Test
+	void testSetIdioma13() {
+		
+		 Jugador jug= new Jugador();
+		 
+		 String idioma= "Espa√±ol";
+		 jug.setIdioma(idioma);
+		 assertEquals(idioma, jug.getIdioma());
+		
+		fail("Todavia no se ha modificado el Getter.");
+	}
+	
+	/**
+	 * TC14 - Idioma (Alem√°n). Mediante esta prueba, introduciremos un idioma v√°lido. El test deber√° ser v√°lido
+	 */
+	@Test
+	void testSetIdioma14() {
+		
+		 Jugador jug= new Jugador();
+		 
+		 String idioma= "Alem√°n";
+		 jug.setIdioma(idioma);
+		 assertEquals(idioma, jug.getIdioma());
+		
+		fail("Todavia no se ha modificado el Getter.");
+	}
+	
+	/**
+	 * TC15 - Idioma (Franc√©s). Mediante esta prueba, introduciremos un idioma v√°lido. El test deber√° ser v√°lido
+	 */
+	@Test
+	void testSetIdioma15() {
+		
+		 Jugador jug= new Jugador();
+		 
+		 String idioma= "Franc√©s";
+		 jug.setIdioma(idioma);
+		 assertEquals(idioma, jug.getIdioma());
+		
+		fail("Todavia no se ha modificado el Getter.");
+	}
+	
+	/**
+	 * TC16 - Idioma (null). Mediante esta prueba, no introduciremos un idioma . El test no deber√° ser v√°lido
+	 */
+	@Test
+	void testSetIdioma16() {
+		
+		 Jugador jug= new Jugador();
+		 
+		 String idioma= " ";
+		 jug.setIdioma(idioma);
+		 assertEquals(null, jug.getIdioma());
+		
+		fail("Car√°cter introducido insuficiente");
+	}
+	/**
+	 * TC17 - Idioma (Espa√±ol). Mediante esta prueba, introduciremos un idioma distinto de los disponibles. El test deber√° ser no v√°lido
+	 */
+	@Test
+	void testSetIdioma17() {
+		
+		 Jugador jug= new Jugador();
+		 
+		 String idioma= "Chino";
+		 jug.setIdioma(idioma);
+		 assertEquals(null, jug.getIdioma());
+		
+		fail("El idioma introducido no es correcto.");
 	}
 }
