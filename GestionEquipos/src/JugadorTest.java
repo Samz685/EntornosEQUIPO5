@@ -109,9 +109,9 @@ class JugadorTest {
 	@Test
 	void testSetEdad8() {
 		Jugador jugador = new Jugador();
-		int edad= "Pe";
-		jugador.setEdad(edad);
-		assertEquals(0, jugador.getEdad());
+		int edad= 0;
+		jugador.setEdad(0);
+		assertEquals("pe", jugador.getEdad());
 		
 		fail("Car�cter no v�lido");
 	}
