@@ -53,7 +53,7 @@ class JugadorTest {
 	}
 	
 	/**
-	 * TC04 - Nombre (Numero car�cteres maximo)
+	 * TC04 - Nombre (Numero caracteres maximo)
 	 */
 	@Test
 	void testSetNombreJugador4() {
@@ -66,7 +66,7 @@ class JugadorTest {
 	}
 	
 	/**
-	 * TC05 - Nombre (Numero car�cteres >20)
+	 * TC05 - Nombre (Numero caracteres >20)
 	 */
 	@Test
 	void testSetNombreJugador5() {
@@ -75,7 +75,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Excedido n�mero car�cteres permitido");
+		fail("Excedido numero caracteres permitido");
 	}
 	
 	/**
@@ -88,7 +88,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Car�cteres n�mericos no permitidos");
+		fail("caracteres numericos no permitidos");
 	}
 	/**
 	 * TC05 - TC18 - Nombre (Null)
@@ -113,7 +113,7 @@ class JugadorTest {
 		jugador.setEdad(0);
 		assertEquals("pe", jugador.getEdad());
 		
-		fail("Car�cter no v�lido");
+		fail("Caracter no valido");
 	}
 	
 	/**
@@ -126,7 +126,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		assertEquals(0, jugador.getEdad());
 		
-		fail("N�meros negativos no permitidos");
+		fail("Numeros negativos no permitidos");
 	}
 	/**
 	 * TC09 - Edad (Menor edad)
@@ -142,7 +142,7 @@ class JugadorTest {
 	}
 
 	/**
-	 * TC10 - Edad (Mayor edad). Mediante esta prueba el test debe ser válido, al introducir un número mayor o igual a 18
+	 * TC10 - Edad (Mayor edad). Mediante esta prueba el test debe ser valido, al introducir un numero mayor o igual a 18
 	 */
 	@Test
 	void testSetEdad11() {
@@ -156,7 +156,7 @@ class JugadorTest {
 	}
 		
 		/**
-		 * TC20 - Edad (Null). Mediante esta prueba el test NO debe ser válido, al introducir un carácter vacio en un campo numérico.
+		 * TC20 - Edad (Null). Mediante esta prueba el test NO debe ser valido, al introducir un caracter vacio en un campo numerico.
 		 */
 		@Test
 		void testSetEdad12() {
@@ -166,18 +166,18 @@ class JugadorTest {
 			assertEquals(" ", jug.getEdad());
 			
 			
-			fail("Carácter introducido no válido, el caracter introducido debe ser numérico, y mayor a 18");
+			fail("Caracter introducido no valido, el caracter introducido debe ser numerico, y mayor a 18");
 	}
 
 	/**
-	 * TC13 - Idioma (Español). Mediante esta prueba, introduciremos un idioma válido. El test deberá ser válido
+	 * TC13 - Idioma (Espa�ol). Mediante esta prueba, introduciremos un idioma valido. El test debera ser valido
 	 */
 	@Test
 	void testSetIdioma13() {
 		
 		 Jugador jug= new Jugador();
 		 
-		 String idioma= "Español";
+		 String idioma= "Espa�ol";
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
@@ -185,14 +185,14 @@ class JugadorTest {
 	}
 	
 	/**
-	 * TC14 - Idioma (Alemán). Mediante esta prueba, introduciremos un idioma válido. El test deberá ser válido
+	 * TC14 - Idioma (Aleman). Mediante esta prueba, introduciremos un idioma valido. El test debera ser valido
 	 */
 	@Test
 	void testSetIdioma14() {
 		
 		 Jugador jug= new Jugador();
 		 
-		 String idioma= "Alemán";
+		 String idioma= "Aleman";
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
@@ -200,14 +200,14 @@ class JugadorTest {
 	}
 	
 	/**
-	 * TC15 - Idioma (Francés). Mediante esta prueba, introduciremos un idioma válido. El test deberá ser válido
+	 * TC15 - Idioma (Francés). Mediante esta prueba, introduciremos un idioma valido. El test debera ser válido
 	 */
 	@Test
 	void testSetIdioma15() {
 		
 		 Jugador jug= new Jugador();
 		 
-		 String idioma= "Francés";
+		 String idioma= "Frances";
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
@@ -215,7 +215,7 @@ class JugadorTest {
 	}
 	
 	/**
-	 * TC16 - Idioma (null). Mediante esta prueba, no introduciremos un idioma . El test no deberá ser válido
+	 * TC16 - Idioma (null). Mediante esta prueba, no introduciremos un idioma . El test no debera ser valido
 	 */
 	@Test
 	void testSetIdioma16() {
@@ -226,10 +226,10 @@ class JugadorTest {
 		 jug.setIdioma(idioma);
 		 assertEquals(null, jug.getIdioma());
 		
-		fail("Carácter introducido insuficiente");
+		fail("Caracter introducido insuficiente");
 	}
 	/**
-	 * TC17 - Idioma (Español). Mediante esta prueba, introduciremos un idioma distinto de los disponibles. El test deberá ser no válido
+	 * TC17 - Idioma (Espa�ol). Mediante esta prueba, introduciremos un idioma distinto de los disponibles. El test debera ser no valido
 	 */
 	@Test
 	void testSetIdioma17() {
