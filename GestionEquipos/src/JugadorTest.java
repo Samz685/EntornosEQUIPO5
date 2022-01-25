@@ -152,7 +152,7 @@ class JugadorTest {
 		assertEquals(edad, jug.getEdad());
 		
 		
-		fail("Todavia no se ha modificado el Getter.");
+		
 	}
 		
 		/**
@@ -163,10 +163,10 @@ class JugadorTest {
 			Jugador jug= new Jugador();
 			int edad= 0;
 			jug.setEdad(0);
-			assertEquals(" ", jug.getEdad());
+			assertEquals(" ", jug.getEdad(),"Caracter introducido no valido, el caracter introducido debe ser numerico, y mayor a 18");
 			
 			
-			fail("Caracter introducido no valido, el caracter introducido debe ser numerico, y mayor a 18");
+			
 	}
 
 	/**
@@ -181,7 +181,7 @@ class JugadorTest {
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
-		fail("Todavia no se ha modificado el Getter.");
+		
 	}
 	
 	/**
@@ -196,7 +196,7 @@ class JugadorTest {
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
-		fail("Todavia no se ha modificado el Getter.");
+		
 	}
 	
 	/**
@@ -211,7 +211,7 @@ class JugadorTest {
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
-		fail("Todavia no se ha modificado el Getter.");
+		
 	}
 	
 	/**
@@ -224,9 +224,9 @@ class JugadorTest {
 		 
 		 String idioma= " ";
 		 jug.setIdioma(idioma);
-		 assertEquals(null, jug.getIdioma());
+		 assertEquals(null, jug.getIdioma(),"Caracter introducido insuficiente");
 		
-		fail("Caracter introducido insuficiente");
+		
 	}
 	/**
 	 * TC17 - Idioma (Español). Mediante esta prueba, introduciremos un idioma distinto de los disponibles. El test debera ser no valido
@@ -238,8 +238,8 @@ class JugadorTest {
 		 
 		 String idioma= "Chino";
 		 jug.setIdioma(idioma);
-		 assertEquals(null, jug.getIdioma());
+		 assertEquals(null, jug.getIdioma(),"El idioma introducido no es correcto.");
 		
-		fail("El idioma introducido no es correcto.");
+		
 	}
 }
