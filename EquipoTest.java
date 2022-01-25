@@ -21,10 +21,10 @@ class EquipoTest {
 	@Test
 	 void testSetNombreEquipo() {
 		Equipo equ=new Equipo();
-		equ.setNombreEquipo(null);
-		assertEquals(-100,equ.getNombreEquipo());
+		equ.setNombreEquipo(-100);
+		assertEquals(null,equ.getNombreEquipo(),"No se pueden introducir caracteres n�mericos para el nombre");
 		
-		fail("No se pueden introducir caracteres n�mericos para el nombre");
+		
 	}
 	
 	/**
