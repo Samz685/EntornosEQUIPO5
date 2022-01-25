@@ -22,25 +22,24 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(null, jugador.getNombreJugador());
 		
-		fail("Car�cter no permitido");
+		fail("Carï¿½cter no permitido");
 	}
 	
 
 	/**
-	 * TC02 - Nombre (Numero car�cteres < 4)
+	 * TC02 - Nombre (Numero carï¿½cteres < 4)
 	 */
 	@Test
 	void testSetNombreJugador2() {
 		Jugador jugador = new Jugador();
 		String nombre= "Pep";
 		jugador.setNombreJugador(nombre);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador(), "Carï¿½cteres introducidos insuficientes");
 		
-		fail("Car�cteres introducidos insuficientes");
 	}
 
 	/**
-	 * TC03 - Nombre (Numero car�cteres minimo)
+	 * TC03 - Nombre (Numero carï¿½cteres minimo)
 	 */
 	@Test
 	void testSetNombreJugador3() {
@@ -49,7 +48,6 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(nombre, jugador.getNombreJugador());
 		
-		fail("Car�cteres introducidos insuficientes");
 	}
 	
 	/**
@@ -62,7 +60,6 @@ class JugadorTest {
 		jugador.setNombreJugador(nombre);
 		assertEquals(nombre, jugador.getNombreJugador());
 		
-		fail("Car�cteres introducidos insuficientes");
 	}
 	
 	/**
@@ -73,9 +70,8 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombre= "PepePepePepePepePepeP";
 		jugador.setNombreJugador(nombre);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador(), "Excedido numero caracteres permitido");
 		
-		fail("Excedido numero caracteres permitido");
 	}
 	
 	/**
@@ -86,9 +82,8 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombre= "Pepe34";
 		jugador.setNombreJugador(nombre);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador()"caracteres numericos no permitidos");
 		
-		fail("caracteres numericos no permitidos");
 	}
 	/**
 	 * TC05 - TC18 - Nombre (Null)
@@ -98,9 +93,8 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombre= " ";
 		jugador.setNombreJugador(nombre);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador(), "Campo nombre vacio");
 		
-		fail("Campo nombre vacio");
 	}
 	
 	/**
@@ -111,9 +105,8 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		int edad= 0;
 		jugador.setEdad(0);
-		assertEquals("pe", jugador.getEdad());
+		assertEquals("pe", jugador.getEdad(), "Caracter no valido");
 		
-		fail("Caracter no valido");
 	}
 	
 	/**
@@ -122,11 +115,10 @@ class JugadorTest {
 	@Test
 	void testSetEdad9() {
 		Jugador jugador = new Jugador();
-		int edad= 10;
+		int edad= -10;
 		jugador.setEdad(edad);
-		assertEquals(0, jugador.getEdad());
+		assertEquals(0, jugador.getEdad(), "Numeros negativos no permitidos");
 		
-		fail("Numeros negativos no permitidos");
 	}
 	/**
 	 * TC09 - Edad (Menor edad)
@@ -136,9 +128,8 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		int edad= 17;
 		jugador.setEdad(edad);
-		assertEquals(0, jugador.getEdad());
+		assertEquals(0, jugador.getEdad(), "Menor de edad no permitido");
 		
-		fail("Menor de edad no permitido");
 	}
 
 	/**
@@ -170,14 +161,14 @@ class JugadorTest {
 	}
 
 	/**
-	 * TC13 - Idioma (Espa�ol). Mediante esta prueba, introduciremos un idioma valido. El test debera ser valido
+	 * TC13 - Idioma (Español). Mediante esta prueba, introduciremos un idioma valido. El test debera ser valido
 	 */
 	@Test
 	void testSetIdioma13() {
 		
 		 Jugador jug= new Jugador();
 		 
-		 String idioma= "Espa�ol";
+		 String idioma= "Español";
 		 jug.setIdioma(idioma);
 		 assertEquals(idioma, jug.getIdioma());
 		
@@ -200,7 +191,7 @@ class JugadorTest {
 	}
 	
 	/**
-	 * TC15 - Idioma (Francés). Mediante esta prueba, introduciremos un idioma valido. El test debera ser válido
+	 * TC15 - Idioma (FrancÃ©s). Mediante esta prueba, introduciremos un idioma valido. El test debera ser vÃ¡lido
 	 */
 	@Test
 	void testSetIdioma15() {
@@ -229,7 +220,7 @@ class JugadorTest {
 		
 	}
 	/**
-	 * TC17 - Idioma (Espa�ol). Mediante esta prueba, introduciremos un idioma distinto de los disponibles. El test debera ser no valido
+	 * TC17 - Idioma (Español). Mediante esta prueba, introduciremos un idioma distinto de los disponibles. El test debera ser no valido
 	 */
 	@Test
 	void testSetIdioma17() {
