@@ -168,7 +168,7 @@ class EquipoTest {
 		int rank = ;
 		equipo.setRanking(rank);
 		assertEquals(null,equipo.getRanking(),"El ranking del equipo no puede estar vacio");
-
+		
 	}
 
 }

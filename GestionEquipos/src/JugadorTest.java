@@ -152,9 +152,10 @@ class JugadorTest {
 		@Test
 		void testSetEdad12() {
 			Jugador jug= new Jugador();
-			int edad= 0;
-			jug.setEdad(0);
-			assertEquals(" ", jug.getEdad(),"Caracter introducido no valido, el caracter introducido debe ser numerico, y mayor a 18");
+			Integer edad= null;
+			jug.setEdad(edad);
+			//assertEquals(" ", jug.getEdad(),"Caracter introducido no valido, el caracter introducido debe ser numerico, y mayor a 18");
+			assertNull(jug.getEdad());
 			
 			
 			
