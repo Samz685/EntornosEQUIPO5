@@ -4,9 +4,7 @@ public class AsignarEquipo {
       private Jugador jugador;
       
       
-      public AsignarEquipo(Equipo equipo, Jugador jugador) {
-    	  this.setEquipo(equipo);
-    	  this.setJugador(jugador);
+      public AsignarEquipo() {
     	  
       }
       
@@ -16,6 +14,14 @@ public class AsignarEquipo {
       
       public void setJugador(Jugador jugador) {
   		//code here
+      }
+      
+      public Equipo getEquipo(){
+          return equipo;
+      }
+      
+      public Jugador getJugador(){
+         return jugador;
       }
       
 }
