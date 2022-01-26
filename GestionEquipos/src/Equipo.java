@@ -1,12 +1,9 @@
-
 public class Equipo {
 	private String nombreEquipo;
 	private int ranking;
 	
 	
 	public Equipo () {
-		this.setNombreEquipo(nombreEquipo);
-		this.setRanking(ranking);
 	}
 	
 	
