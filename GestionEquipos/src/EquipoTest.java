@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * 
+ *
  */
 
 /**
@@ -19,16 +19,16 @@ class EquipoTest {
 	 * .  que el test debe dar error.
 	 */
 	@Test
-	 void testSetNombreEquipo() {
+	void testSetNombreEquipo() {
 		Equipo equ=new Equipo();
-		equ.setNombreEquipo(null);
-		assertEquals(-100,equ.getNombreEquipo());
-		
-		fail("No se pueden introducir caracteres n�mericos para el nombre");
+		equ.setNombreEquipo(-100);
+		assertEquals(null,equ.getNombreEquipo(),"No se pueden introducir caracteres n�mericos para el nombre");
+
+
 	}
-	
+
 	/**
-	 * TC07 - Nombre (Numero Caracteres Num�ricos).Introduciremos un n�mero en el campo de nombre, por lo que el test 
+	 * TC07 - Nombre (Numero Caracteres Num�ricos).Introduciremos un n�mero en el campo de nombre, por lo que el test
 	 * debe dar error.
 	 * .
 	 */
@@ -36,9 +36,8 @@ class EquipoTest {
 	void testSetNombreEquipo2() {
 		Equipo equ=new Equipo();
 		equ.setNombreEquipo(null);
-		assertEquals(34,equ.getNombreEquipo());
-		
-		fail("No se pueden introducir caracteres n�mericos para el nombre");
+		assertEquals(34,equ.getNombreEquipo(),"No se pueden introducir caracteres n�mericos para el nombre");
+
 	}
 
 	/**
@@ -56,9 +55,8 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombre = "Equ";
 		equipo.setNombreEquipo(nombre);
-		assertEquals(null,equipo.getNombreEquipo());
+		assertEquals(null,equipo.getNombreEquipo(),"El nombre tiene que ser mas largo de 4 caracteres");
 
-		fail("El nombre tiene que ser mas largo de 4 caracteres");
 	}
 
 	/**
@@ -94,9 +92,8 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombre = "Equipo de prueba caracteres largos";
 		equipo.setNombreEquipo(nombre);
-		assertEquals(null,equipo.getNombreEquipo());
+		assertEquals(null,equipo.getNombreEquipo(),"El nombre del equipo no puede tener mas de 20 caracteres");
 
-		fail("El nombre del equipo no puede tener mas de 20 caracteres");
 	}
 
 	/**
@@ -107,8 +104,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombre = "";
 		equipo.setNombreEquipo(nombre);
-		assertEquals(null,equipo.getNombreEquipo()"El nombre del equipo no puede estar vacio");
-
+		assertEquals(null,equipo.getNombreEquipo(),"El nombre del equipo no puede estar vacio");
 
 	}
 
@@ -121,8 +117,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		int rank = -2;
 		equipo.setRankingEquipo(rank);
-		assertEquals(null,equipo.getRankingEquipo()"El ranking del equipo no puede ser negativo");
-
+		assertEquals(null,equipo.getRankingEquipo(),"El ranking del equipo no puede ser negativo");
 
 	}
 
@@ -135,7 +130,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		int rank = "a";
 		equipo.setRankingEquipo(rank);
-		assertEquals(null,equipo.getRankingEquipo()"El ranking del equipo no puede contener caracteres");
+		assertEquals(null,equipo.getRankingEquipo(),"El ranking del equipo no puede contener caracteres");
 
 	}
 
@@ -172,7 +167,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		int rank = ;
 		equipo.setRankingEquipo(rank);
-		assertEquals(null,equipo.getRankingEquipo()"El ranking del equipo no puede estar vacio");
+		assertEquals(null,equipo.getRankingEquipo(),"El ranking del equipo no puede estar vacio");
 
 	}
 
