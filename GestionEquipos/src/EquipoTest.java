@@ -117,7 +117,8 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		int rank = -2;
 		equipo.setRanking(rank);
-		assertEquals(null,equipo.getRanking(),"El ranking del equipo no puede ser negativo");
+		//assertEquals(null,equipo.getRanking(),"El ranking del equipo no puede ser negativo");
+		assertNull(equipo.getRanking());
 
 	}
 
@@ -128,9 +129,10 @@ class EquipoTest {
 	@Test
 	void testSetRankingEquipoCaracter() {
 		Equipo equipo = new Equipo();
-		String rank = "a";
+		char rank = 'a';
 		equipo.setRanking(rank);
-		assertEquals(null,equipo.getRanking(),"El ranking del equipo no puede contener caracteres");
+		//assertEquals(null,equipo.getRanking(),"El ranking del equipo no puede contener caracteres");
+		assertNull(equipo.getRanking());
 
 	}
 
@@ -165,10 +167,10 @@ class EquipoTest {
 	@Test
 	void testSetRankingEquipoVacio() {
 		Equipo equipo = new Equipo();
-		int rank = ;
+		int rank= 0;
 		equipo.setRanking(rank);
-		assertEquals(null,equipo.getRanking(),"El ranking del equipo no puede estar vacio");
-		
+		//assertEquals(0,equipo.getRanking(),"El ranking del equipo no puede estar vacio");
+		assertNull(equipo.getRanking());
 	}
 
 }
