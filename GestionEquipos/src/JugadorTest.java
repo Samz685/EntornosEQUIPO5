@@ -82,7 +82,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombre= "Pepe34";
 		jugador.setNombreJugador(nombre);
-		assertEquals(null, jugador.getNombreJugador()"caracteres numericos no permitidos");
+		assertEquals(null, jugador.getNombreJugador(),"caracteres numericos no permitidos");
 		
 	}
 	/**
